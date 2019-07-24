@@ -12,7 +12,7 @@ $this->registerJs("var _opts = {$opts};", View::POS_BEGIN);
 ?>
 <div class="flex">
     <div class="f-3">
-        <input class="form-control search" data-target="available"
+        <input class="form-control search m-0" data-target="available"
                placeholder="<?php echo Yii::t('yii2mod.rbac', 'Search for available'); ?>">
         <br/>
         <select multiple size="20" class="form-control list" data-target="available"></select>
@@ -34,7 +34,7 @@ $this->registerJs("var _opts = {$opts};", View::POS_BEGIN);
         </div>
     </div>
     <div class="f-3">
-        <input class="form-control search" data-target="assigned"
+        <input class="form-control search m-0" data-target="assigned"
                placeholder="<?php echo Yii::t('yii2mod.rbac', 'Search for assigned'); ?>">
         <br/>
         <select multiple size="20" class="form-control list" data-target="assigned"></select>

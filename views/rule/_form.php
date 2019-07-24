@@ -12,15 +12,15 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?php echo $form->field($model, 'name')->textInput(['maxlength' => 64]); ?>
+    <?php echo $form->field($model, 'name')->textInput(['maxlength' => 64, 'class' => 'form-control m-0']); ?>
 
-    <?php echo $form->field($model, 'className')->textInput(); ?>
+    <?php echo $form->field($model, 'className')->textInput(['class' => 'form-control m-0']); ?>
 
     <div class="form-group">
         <?php echo Html::submitButton(
             $model->getIsNewRecord() ? Yii::t('yii2mod.rbac', 'Create') : Yii::t('yii2mod.rbac', 'Update'),
             [
-                'class' => $model->getIsNewRecord() ? 'btn btn-success' : 'btn btn-primary',
+                'class' => $model->getIsNewRecord() ? 'btn btn-success m-0' : 'btn btn-primary m-0',
             ]
         ); ?>
     </div>

@@ -7,12 +7,12 @@ use yii\helpers\Html;
 
 $labels = $this->context->getLabels();
 $this->title = Yii::t('yii2mod.rbac', 'Create ' . $labels['Item']);
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'RBAC'), 'url' => ['/rbac-management']];
 $this->params['breadcrumbs'][] = ['label' => Yii::t('yii2mod.rbac', $labels['Items']), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 $this->render('/layouts/_sidebar');
 ?>
 <div class="auth-item-create">
-    <h1><?php echo Html::encode($this->title); ?></h1>
     <?php echo $this->render('_form', [
         'model' => $model,
     ]); ?>

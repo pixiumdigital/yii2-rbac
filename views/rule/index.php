@@ -9,15 +9,14 @@ use yii\widgets\Pjax;
 /* @var $searchModel yii2mod\rbac\models\search\BizRuleSearch */
 
 $this->title = Yii::t('yii2mod.rbac', 'Rules');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'RBAC'), 'url' => ['/rbac-management']];
 $this->params['breadcrumbs'][] = $this->title;
 $this->render('/layouts/_sidebar');
 ?>
 <div class="role-index">
 
-    <h1><?php echo Html::encode($this->title); ?></h1>
-
     <p>
-        <?php echo Html::a(Yii::t('yii2mod.rbac', 'Create Rule'), ['create'], ['class' => 'btn btn-success']); ?>
+        <?php echo Html::a(Yii::t('yii2mod.rbac', 'Create Rule'), ['create'], ['class' => 'btn btn-success m-0']); ?>
     </p>
 
     <?php Pjax::begin(['timeout' => 5000]); ?>
